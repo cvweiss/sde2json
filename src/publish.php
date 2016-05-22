@@ -12,7 +12,6 @@ $t = [];
 
 foreach ($tables as $table) {
 	$table = array_pop($table);
-	//if ($table == "mapCelestialStatistics") continue;
 	echo "Exporting $table ... \n";
 
 	$rows = MyDb::query("select * from $table");
@@ -27,7 +26,7 @@ echo "Complete, now go clear your Cloudflare cache\n";
 
 function putContents($array, $file) {
 	$array = utf8ize($array);
-	$json = json_encode($array, JSON_UNESCAPED_UNICODE);
+	$json = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
 	switch (json_last_error()) {
 		case JSON_ERROR_NONE:
 			file_put_contents($file, $json);
@@ -53,7 +52,6 @@ function putContents($array, $file) {
 			break;
 	}
 	die("\n");
-	return false;
 }
 
 function utf8ize($d) {
