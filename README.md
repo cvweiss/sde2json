@@ -1,2 +1,2 @@
 # sde2json
-Simple FuzzySteve MySQL to JSON conversion.
+Simple FuzzySteve MySQL SDE to JSON conversion.
