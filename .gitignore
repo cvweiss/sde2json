@@ -1,0 +1,7 @@
+public/*.json
+composer.lock
+composer.phar
+vendor/
+sde/mysql-latest*
+sde/sde-*
+

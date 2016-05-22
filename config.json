@@ -1,0 +1,5 @@
+{
+	"mysql_user": "sde",
+	"mysql_password": "sde",
+	"mysql_database": "sde"
+}
