@@ -18,7 +18,7 @@ foreach ($tables as $table) {
 	$rows = MyDb::query("select * from $table");
 	if (putContents($rows, $exportDir . $table . '.json') == false) continue;
 
-	$t[] = ['name' => $table, 'href' => '/' . $table . 'json'];
+	$t[] = ['name' => $table, 'href' => '/' . $table . '.json'];
 }
 
 putContents($t, $exportDir . 'tables.json');
