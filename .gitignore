@@ -4,4 +4,4 @@ composer.phar
 vendor/
 sde/mysql-latest*
 sde/sde-*
-
+sde/*.md5

@@ -1,7 +1,7 @@
 {
 	"author": "Clinton Weiss",
 	"require": {
-		"cvweiss/project.base": "^0.0.1"
+		"cvweiss/project.base": "*"
 	},
 		"autoload": {
 			"psr-4": {

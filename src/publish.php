@@ -26,7 +26,7 @@ echo "Complete, now go clear your Cloudflare cache\n";
 
 function putContents($array, $file) {
 	$array = utf8ize($array);
-	$json = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
+	$json = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK | JSON_UNESCAPED_SLASHES);
 	switch (json_last_error()) {
 		case JSON_ERROR_NONE:
 			file_put_contents($file, $json);
