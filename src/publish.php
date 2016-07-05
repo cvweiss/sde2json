@@ -15,8 +15,8 @@ foreach ($tables as $table) {
 	$table = array_pop($table);
 	echo "Exporting $table ... \n";
 
-	//$rows = MyDb::query("select * from $table");
-	//if (putContents($rows, $exportDir . $table . '.json') == false) continue;
+	$rows = MyDb::query("select * from $table");
+	if (putContents($rows, $exportDir . $table . '.json') == false) continue;
 
 	$t[] = ['name' => $table, 'href' => $baseHref . $table . '.json'];
 }
