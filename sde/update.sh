@@ -19,10 +19,11 @@ then
     mysql -usde -psde sde < sde-*.sql
 
     cd $DIR
-    wget -qq "https://www.fuzzwork.co.uk/dump/mysql-latest.tar.bz2.md5" -O installed.md5
+    mv check.md5 installed.md5
+    cp installed.md5 ../public/
 
-    $DIR/../src
+    cd $DIR/../src
     php publish.php
 fi
 
-rm check.md5
+rm check.md5 >/dev/null 2>&1

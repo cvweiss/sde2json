@@ -1,4 +1,5 @@
 public/*.json
+public/*.md5
 composer.lock
 composer.phar
 vendor/
