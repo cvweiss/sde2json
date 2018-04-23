@@ -1,5 +1,6 @@
 public/*.json
 public/*.md5
+public/index.html
 composer.lock
 composer.phar
 vendor/

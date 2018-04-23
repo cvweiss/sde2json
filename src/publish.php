@@ -13,6 +13,9 @@ $t = [];
 
 foreach ($tables as $table) {
 	$table = array_pop($table);
+        if ($table == "mapCelestialStatistics") continue;
+        if ($table == "mapDenormalize") continue;
+        if ($table == "trnTranslations") continue;
 	echo "Exporting $table ... \n";
 
 	$rows = MyDb::query("select * from $table");
@@ -22,6 +25,9 @@ foreach ($tables as $table) {
 }
 
 putContents($t, $exportDir . 'tables.json');
+
+$now = date('Y/m/d H:i');
+file_put_contents("$exportDir/index.html", "<html><body>A simple SDE conversion into json files. To see a list of converted tables, see <a href='/tables.json'>tables.json</a><br/>To access a table, visit table-name.json, for example, <a href='/invFlags.json'>invFlags.json</a><br/>Many thanks to FuzzySteve for the SDE conversion into MySQL<br/>Last Updated: $now</body></html>");
 
 echo "Complete, now go clear your Cloudflare cache\n";
 
