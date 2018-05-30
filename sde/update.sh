@@ -18,12 +18,13 @@ then
     cd sde-*
     mysql -usde -psde sde < sde-*.sql
 
+    cd $DIR/../src
+    php publish.php
+
     cd $DIR
     mv check.md5 installed.md5
     cp installed.md5 ../public/
 
-    cd $DIR/../src
-    php publish.php
 fi
 
-rm check.md5 >/dev/null 2>&1
+#rm check.md5 >/dev/null 2>&1
