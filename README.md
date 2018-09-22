@@ -3,7 +3,7 @@ Simple FuzzySteve MySQL SDE to JSON conversion.
 
 ### Setup
 
-After your ```git checkout cvweiss/sde2json``` modify config.json to your setup.
+After your ```git clone cvweiss/sde2json``` modify config.json to your setup.
 
 Run ```update.sh``` in the sde directory.
 
