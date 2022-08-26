@@ -1,9 +1,8 @@
 public/*.json
 public/*.md5
 public/index.html
-composer.lock
-composer.phar
-vendor/
 sde/mysql-latest*
 sde/sde-*
 sde/*.md5
+node_modules
+.env

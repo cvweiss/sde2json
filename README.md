@@ -1,9 +1,14 @@
 # sde2json
 Simple FuzzySteve MySQL SDE to JSON conversion.
 
+### Requirements
+node, npm, mysql, redis
+
 ### Setup
 
-After your ```git checkout cvweiss/sde2json``` modify config.json to your setup.
+After your ```git checkout cvweiss/sde2json``` modify .env to your setup using the example.env file.
+
+Install requirements: ```npm update```
 
 Run ```update.sh``` in the sde directory.
 

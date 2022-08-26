@@ -18,8 +18,8 @@ then
     cd sde-*
     mysql -usde -psde sde < sde-*.sql
 
-    cd $DIR/../src
-    php publish.php
+    cd $DIR/../
+    node app.js
 
     cd $DIR
     mv check.md5 installed.md5
